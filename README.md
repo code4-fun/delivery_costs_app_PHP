@@ -58,7 +58,7 @@
 
 ## endpoints
 
-- `POST /calculate` - расчет стоимости доставки. Обязательные параметры: *carrier*, *sourceKladr*, *targetKladr*, *weight*. Если не заполнен один из обязательных параметров возвращается status code **400 Not found**. В случае успеха вернется status code **200 OK**.
+- `POST /calculate` - расчет стоимости доставки. Обязательные параметры: *carrier*, *sourceKladr*, *targetKladr*, *weight*. Если не заполнен один из обязательных параметров возвращается status code **404 Not found**. В случае успеха вернется status code **200 OK**.
 
   Пример тела запроса:
 
