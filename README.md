@@ -10,35 +10,35 @@
 
 1. «Быстрая доставка»:
 
-```PHP
-base_url: string
-@var sourceKladr string  //кладр откуда везем
-@var targetKladr string  //кладр куда везем
-@var weight float        //вес отправления в кг
-@return json
-{
-  'price': float   //стоимость
-  'period': int    //количество дней начиная с сегодняшнего, но после 18.00 заявки не принимаются.
-  'error': string
-}
-```
+    ```PHP
+    base_url: string
+    @var sourceKladr string  //кладр откуда везем
+    @var targetKladr string  //кладр куда везем
+    @var weight float        //вес отправления в кг
+    @return json
+    {
+      'price': float   //стоимость
+      'period': int    //количество дней начиная с сегодняшнего, но после 18.00 заявки не принимаются.
+      'error': string
+    }
+    ```
 
 2. «Медленная доставка»:
    
-имеет базовую стоимость 150р
+    имеет базовую стоимость 150р
 
-```PHP
-base_url: string
-@var sourceKladr string   //кладр откуда везем
-@var targetKladr string   //кладр куда везем
-@var weight float         //вес отправления в кг
-@return json
-{
-  'coefficient': float   //коэффициент (конечная цена есть произведение базовой стоимости и коэффициента)
-  'date': string         //дата доставки в формате 2017-10-20
-  'error': string
-}
-```
+    ```PHP
+    base_url: string
+    @var sourceKladr string   //кладр откуда везем
+    @var targetKladr string   //кладр куда везем
+    @var weight float         //вес отправления в кг
+    @return json
+    {
+      'coefficient': float   //коэффициент (конечная цена есть произведение базовой стоимости и коэффициента)
+      'date': string         //дата доставки в формате 2017-10-20
+      'error': string
+    }
+    ```
 
 Задача в том, чтобы получить для набора отправлений стоимость и сроки доставки в контексте списка транспортных компаний и одной выбранной.
 
